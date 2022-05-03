@@ -1,6 +1,20 @@
 # MechaCar_Statistical_Analysis
 Statistics and R
 
+### Table of Contents
+- [1 Overview](#1-overview)
+- [2 Linear Regression to Predict MPG](#2-linear-regression-to-predict-mpg)
+  - [2.1 Results](#21-results)
+- [3 Summary Statistics on Suspension Coils](#3-summary-statistics-on-suspension-coils)
+  - [3.1 Results](#31-results)
+- [4 T-Tests on Suspension Coils](#4-t-tests-on-suspension-coils)
+  - [4.1 Results](#41-results)
+- [5 Study Design: MechaCar vs Competition](#5-study-design-mechacar-vs-competition)
+  - [5.1 Hypotheses: Null and Alternative](#51-hypotheses-null-and-alternative)
+  - [5.2 Metrics](#52-metrics)
+  - [5.3 Statistical Tests](#53-statistical-tests)
+
+
 ## 1 Overview
 
 In this project, AutosRUs’ newest prototype, the MechaCar, was suffering from production troubles that were blocking the manufacturing team’s progress. AutosRUs’ upper management asked for a review of the production data for insights that may help the manufacturing team.
@@ -75,7 +89,7 @@ When looking at each lot individually, Lot 1 and Lot 2 both remain within the 10
 
 Using R, t-tests were performed to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
 
-### 4.1  Results
+### 4.1 Results
 
 <p align="center">
   All Manufacturing Lots
