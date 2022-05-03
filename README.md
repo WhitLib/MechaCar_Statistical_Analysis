@@ -1,7 +1,16 @@
 # MechaCar_Statistical_Analysis
 Statistics and R
 
-## Overview
+## 1 Overview
+
+In this project, AutosRUs’ newest prototype, the MechaCar, was suffering from production troubles that were blocking the manufacturing team’s progress. AutosRUs’ upper management asked for a review of the production data for insights that may help the manufacturing team.
+
+For this challenge, the following was executed:
+
+- [x] Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes
+- [x] Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots
+- [x] Run t-tests to determine if the manufacturing lots are statistically different from the mean population
+- [x] Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. F
 
 ## 2 Linear Regression to Predict MPG
 
@@ -9,9 +18,13 @@ The `MechaCar_mpg.csv` dataset contains mpg test results for 50 prototype MechaC
 
 ### 2.1 Results 
 
-**MPG = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.068)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD**
+<p align="center">
+  MPG = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.068)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD
+</p>
 
-<img width="508" alt="Screen Shot 2022-05-02 at 7 57 39 PM" src="https://user-images.githubusercontent.com/95978097/166399719-224bf87b-c5ee-4a3b-9315-22bb9df6677c.png">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/95978097/166399719-224bf87b-c5ee-4a3b-9315-22bb9df6677c.png" />
+</p>
 
 **Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
 
@@ -32,15 +45,25 @@ The MechaCar `Suspension_Coil.csv` dataset contained the results from multiple p
 - The suspension coil’s PSI continuous variable across all manufacturing lots
 - The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
-### Results
+### 3.1 Results
 
-total_summary
+<p align="center">
+  total_summary
+</p>
 
-<img width="332" alt="Screen Shot 2022-05-02 at 8 26 08 PM" src="https://user-images.githubusercontent.com/95978097/166401220-833fb098-54c5-48ef-8f20-d23c60c91a80.png">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/95978097/166401220-833fb098-54c5-48ef-8f20-d23c60c91a80.png" />
+</p>
 
-manufacturingLot_summary
 
-<img width="488" alt="Screen Shot 2022-05-02 at 8 27 05 PM" src="https://user-images.githubusercontent.com/95978097/166401271-077e66e2-d99e-460d-b9e2-acfe70c58aa7.png">
+<p align="center">
+  manufacturingLot_summary
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/95978097/166401271-077e66e2-d99e-460d-b9e2-acfe70c58aa7.png" />
+</p>
+
 
 **The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?**
 
@@ -54,15 +77,59 @@ Using R, t-tests were performed to determine if all manufacturing lots and each 
 
 ### 4.1  Results
 
-All Manufacturing Lots
-<img width="691" alt="Screen Shot 2022-05-02 at 9 02 36 PM" src="https://user-images.githubusercontent.com/95978097/166403205-fd471588-8645-432f-a893-778f67975bf0.png">
+<p align="center">
+  All Manufacturing Lots
+</p>
 
-Individual Manufacturing Lots
-<img width="451" alt="Screen Shot 2022-05-02 at 9 01 40 PM" src="https://user-images.githubusercontent.com/95978097/166403147-7d33c1c4-728f-49a3-ac13-e25a99962b97.png">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/95978097/166403205-fd471588-8645-432f-a893-778f67975bf0.png" />
+</p>
+
+<p align="center">
+  Individual Manufacturing Lots
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/95978097/166403147-7d33c1c4-728f-49a3-ac13-e25a99962b97.png" />
+</p>
+
+
 
 The true mean of the sample was equal to **1498.78**, shown in the _All Manufacturing Lots_ R script. Based on the calculated p-value of **0.06**, the assumed significance level of 0.05% is surpassed _and_ there was NOT enough evidence to support the rejection of  the null hypothesis. Overall, the mean of all three of these manufacturing lots is statistically similar to the presumed population mean of 1500.
 
 For each individual lot, Lot 1's sample mimicked the mean for the true sample mean of 1500. With a p-value equal 1, the null hypothesis could not be rejected. Lot 2 nearly derived the same sample mean as Lot 1 equal to **1500.02**. Lot 2's p-value was equal to **0.61** and therefore, the null hypothesis cannot be rejected and the sample mean and the population mean of 1500 were statistically similar.
 
 Lot 3, conversely, portrayed a different scenario. The sammple mean was equal to  **1496.14** and the p-Value was **0.04**; a value less than the assumed 0.05% significance level. Based on this, the null hypothesis was rejected indicating that the sample mean and the presumed population mean were ultimately not statistically different.
+
+## 5 Study Design: MechaCar vs Competition
+
+This study would gather the most recent data for comparable car manufacturers to MechaCar spanning 5 years. In this study, MechaCar will be evaluated for its price relative to similar manufacturers on the market. 
+
+### 5.1 Hypotheses: Null and Alternative
+
+Null Hypothesis (Ho): Based on MechaCar's vehicle performance, its prices are for both new and used cars are accurate.
+
+Alternative Hypothesis (Ha): Based on MechaCar's vehicle performance, its prices are for both new and used cars are not accurate.
+
+### 5.2 Metrics
+
+Data compiled from competitive manufacturers would include the following variables to be tested:
+
+
+Variable | Type 
+-------- | -----
+MPG (Highway) | Independent 
+MPG (Street) | Independent 
+Safety Feature Rating | Independent 
+Current (New) Market Selling Price | Dependent
+Current (Used) Market Selling Price | Dependent
+Condition | Independent
+Drive Package | Independent 
+Engine (Electric, Hybrid, or Gasoline)| Independent 
+
+
+### 5.3 Statistical Tests
+
+To test this study, a multiple linear regression model would be created to determine the factors that have the highest correlation to MechaCar's current new and used market selling prices. 
+
 
