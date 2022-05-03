@@ -47,3 +47,22 @@ manufacturingLot_summary
 Based on the entire population of the production lot, suspension coil variance was equal to **62.29 PSI**, which remains within the 100 PSI requirement.
 
 When looking at each lot individually, Lot 1 and Lot 2 both remain within the 100 PSI variance requirement - equal to **0.98** and **7.47** respectively. However, Lot 3 is disproportionate in performance and consistency, with a variance equal to **170.29**. 
+
+## 4 T-Tests on Suspension Coils
+
+Using R, t-tests were performed to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+
+### 4.1  Results
+
+All Manufacturing Lots
+<img width="691" alt="Screen Shot 2022-05-02 at 9 02 36 PM" src="https://user-images.githubusercontent.com/95978097/166403205-fd471588-8645-432f-a893-778f67975bf0.png">
+
+Individual Manufacturing Lots
+<img width="451" alt="Screen Shot 2022-05-02 at 9 01 40 PM" src="https://user-images.githubusercontent.com/95978097/166403147-7d33c1c4-728f-49a3-ac13-e25a99962b97.png">
+
+The true mean of the sample was equal to **1498.78**, shown in the _All Manufacturing Lots_ R script. Based on the calculated p-value of **0.06**, the assumed significance level of 0.05% is surpassed _and_ there was NOT enough evidence to support the rejection of  the null hypothesis. Overall, the mean of all three of these manufacturing lots is statistically similar to the presumed population mean of 1500.
+
+For each individual lot, Lot 1's sample mimicked the mean for the true sample mean of 1500. With a p-value equal 1, the null hypothesis could not be rejected. Lot 2 nearly derived the same sample mean as Lot 1 equal to **1500.02**. Lot 2's p-value was equal to **0.61** and therefore, the null hypothesis cannot be rejected and the sample mean and the population mean of 1500 were statistically similar.
+
+Lot 3, conversely, portrayed a different scenario. The sammple mean was equal to  **1496.14** and the p-Value was **0.04**; a value less than the assumed 0.05% significance level. Based on this, the null hypothesis was rejected indicating that the sample mean and the presumed population mean were ultimately not statistically different.
+
